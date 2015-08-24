@@ -41,7 +41,7 @@
         <pluginRepository>
           <id>jboss-ga-plugin-repository</id>
           <!--<url>http://maven.repository.redhat.com/techpreview/all</url>-->
-          <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
+          <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-eap-repository/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -86,7 +86,7 @@
 
   <activeProfiles>
     <!-- Optionally, make the repositories active by default -->
-    <activeProfile>jboss-ga-repository</activeProfile>
+    <!--<activeProfile>jboss-ga-repository</activeProfile>-->
     <activeProfile>jboss-earlyaccess-repository</activeProfile>
   </activeProfiles>
 
