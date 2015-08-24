@@ -27,7 +27,7 @@
       <repositories>
         <repository>
           <id>jboss-ga-repository</id>
-          <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
+          <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-eap-repository/</url>
           <!--<url>http://maven.repository.redhat.com/techpreview/all</url>-->
           <releases>
             <enabled>true</enabled>
