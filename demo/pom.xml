@@ -63,6 +63,17 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
+               <pluginRepository>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
+    </pluginRepository>
     </pluginRepositories>
 
     <properties>
