@@ -37,7 +37,7 @@
 	      </snapshots>
 	      <id>central</id>
 	      <name>Central Repository</name>
-	      <url>http://153.92.39.197:8081/nexus/content/repositories/central/</url>
+	      <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
 	    </repository>
         <repository>
           <id>jboss-eap-repository</id>
