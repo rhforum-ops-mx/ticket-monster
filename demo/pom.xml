@@ -35,6 +35,9 @@
 	      <snapshots>
 	        <enabled>false</enabled>
 	      </snapshots>
+	      <releases>
+                <enabled>true</enabled>
+            </releases>
 	      <id>central</id>
 	      <name>Central Repository</name>
 	      <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
