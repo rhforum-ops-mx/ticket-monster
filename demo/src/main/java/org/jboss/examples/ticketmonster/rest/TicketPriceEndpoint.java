@@ -76,6 +76,7 @@ public class TicketPriceEndpoint
       {
          return Response.status(Status.NOT_FOUND).build();
       }
+      entity.setPrice(0);
       TicketPriceDTO dto = new TicketPriceDTO(entity);
       return Response.ok(dto).build();
    }
