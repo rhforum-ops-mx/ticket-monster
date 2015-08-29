@@ -29,6 +29,70 @@
 <!--            <url>http://nexus.cloudapps.workshopdevops.com/content/groups/public/</url>-->
         </mirror>
     </mirrors>
+    <profiles>
+     <profile>
+        <id>securecentral</id>
+         <repositories>
+    	 <repository>
+	      <id>central</id>
+	      <name>Central Repository</name>
+	      <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
+	      <snapshots>
+	        <enabled>false</enabled>
+	      </snapshots>
+	      <releases>
+                <enabled>true</enabled>
+            </releases>
+	    </repository>
+        <repository>
+            <id>redhat-techpreview-all-repository</id>
+          <!--  <url>https://maven.repository.redhat.com/techpreview/all/</url> -->
+          <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+          <id>jboss-eap-repository</id>
+          <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-eap-repository/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+    </repositories>
+     <pluginRepositories>
+    	<pluginRepository>
+	    <id>central</id>
+	      <name>Central Repository</name>
+	      <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+	      <snapshots>
+	        <enabled>false</enabled>
+	      </snapshots>
+    </pluginRepository>
+        <pluginRepository>
+            <id>redhat-techpreview-all-repository</id>
+            <!--<url>https://maven.repository.redhat.com/techpreview/all/</url>-->
+            <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+               
+    </pluginRepositories>
+        </profile>
+        </profiles>
     <!--
   <profiles>
 
