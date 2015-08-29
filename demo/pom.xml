@@ -20,6 +20,17 @@
         https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.3/html-single/Development_Guide
     -->
     <repositories>
+    	 <repository>
+	      <id>central</id>
+	      <name>Central Repository</name>
+	      <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
+	      <snapshots>
+	        <enabled>false</enabled>
+	      </snapshots>
+	      <releases>
+                <enabled>true</enabled>
+            </releases>
+	    </repository>
         <repository>
             <id>redhat-techpreview-all-repository</id>
           <!--  <url>https://maven.repository.redhat.com/techpreview/all/</url> -->
@@ -31,17 +42,6 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-  	<repository>
-	      <snapshots>
-	        <enabled>false</enabled>
-	      </snapshots>
-	      <releases>
-                <enabled>true</enabled>
-            </releases>
-	      <id>central</id>
-	      <name>Central Repository</name>
-	      <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
-	    </repository>
         <repository>
           <id>jboss-eap-repository</id>
           <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-eap-repository/</url>
