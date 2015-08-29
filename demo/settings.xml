@@ -27,7 +27,7 @@
       <repositories>
         <repository>
           <id>jboss-ga-repository</id>
-          <url>http://maven.repository.redhat.com/techpreview/all</url>
+          <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -35,11 +35,32 @@
             <enabled>false</enabled>
           </snapshots>
         </repository>
+        <repository>
+      <id>central</id>
+      <name>Maven Repository Switchboard</name>
+      <layout>default</layout>
+      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
       </repositories>
-      <pluginRepositories>
+	      <pluginRepositories>
+	      <pluginRepository>
+	      <id>central</id>
+	      <name>Maven Plugin Repository</name>
+	      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
+	      <layout>default</layout>
+	      <snapshots>
+	        <enabled>false</enabled>
+	      </snapshots>
+	      <releases>
+	        <updatePolicy>never</updatePolicy>
+	      </releases>
+	    </pluginRepository>
         <pluginRepository>
           <id>jboss-ga-plugin-repository</id>
-          <url>http://maven.repository.redhat.com/techpreview/all</url>
+          <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -49,41 +70,12 @@
         </pluginRepository>
       </pluginRepositories>
     </profile>
-    <!-- Configure the JBoss Early Access Maven repository -->
-    <profile>
-      <id>jboss-earlyaccess-repository</id>
-      <repositories>
-        <repository>
-          <id>jboss-earlyaccess-repository</id>
-          <url>http://maven.repository.redhat.com/earlyaccess/all/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-      </repositories>
-      <pluginRepositories>
-        <pluginRepository>
-          <id>jboss-earlyaccess-plugin-repository</id>
-          <url>http://maven.repository.redhat.com/earlyaccess/all/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </pluginRepository>
-      </pluginRepositories>
-    </profile>
-    
   </profiles>
 
   <activeProfiles>
     <!-- Optionally, make the repositories active by default -->
     <activeProfile>jboss-ga-repository</activeProfile>
-    <activeProfile>jboss-earlyaccess-repository</activeProfile>
+  <!--    <activeProfile>jboss-earlyaccess-repository</activeProfile>-->
   </activeProfiles>
 
 </settings>

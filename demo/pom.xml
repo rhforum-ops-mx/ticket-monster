@@ -22,7 +22,7 @@
     <repositories>
         <repository>
             <id>redhat-techpreview-all-repository</id>
-            <url>https://maven.repository.redhat.com/techpreview/all/</url>
+            <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -35,7 +35,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>redhat-techpreview-all-repository</id>
-            <url>https://maven.repository.redhat.com/techpreview/all/</url>
+            <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
