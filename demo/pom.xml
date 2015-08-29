@@ -34,7 +34,7 @@
       <id>central</id>
       <name>Maven Repository Switchboard</name>
       <layout>default</layout>
-      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
+      <url>https://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
@@ -45,7 +45,7 @@
     	      <pluginRepository>
 	      <id>central</id>
 	      <name>Maven Plugin Repository</name>
-	      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
+	      <url>https://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
 	      <layout>default</layout>
 	      <snapshots>
 	        <enabled>false</enabled>
