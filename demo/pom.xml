@@ -30,9 +30,30 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+         <repository>
+      <id>central</id>
+      <name>Maven Repository Switchboard</name>
+      <layout>default</layout>
+      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
     </repositories>
 
     <pluginRepositories>
+    	      <pluginRepository>
+	      <id>central</id>
+	      <name>Maven Plugin Repository</name>
+	      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
+	      <layout>default</layout>
+	      <snapshots>
+	        <enabled>false</enabled>
+	      </snapshots>
+	      <releases>
+	        <updatePolicy>never</updatePolicy>
+	      </releases>
+	    </pluginRepository>
         <pluginRepository>
             <id>redhat-techpreview-all-repository</id>
             <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
