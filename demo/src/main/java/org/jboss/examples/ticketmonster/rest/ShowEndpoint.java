@@ -61,6 +61,8 @@ public class ShowEndpoint
    @Produces("application/json")
    public Response findById(@PathParam("id") Long id)
    {
+
+       System.out.println("****************************************************************")
       TypedQuery<Show> findByIdQuery = em.createQuery("SELECT DISTINCT s FROM Show s LEFT JOIN FETCH s.event LEFT JOIN FETCH s.venue LEFT JOIN FETCH s.performances LEFT JOIN FETCH s.ticketPrices WHERE s.id = :entityId ORDER BY s.id", Show.class);
       findByIdQuery.setParameter("entityId", id);
       Show entity;
