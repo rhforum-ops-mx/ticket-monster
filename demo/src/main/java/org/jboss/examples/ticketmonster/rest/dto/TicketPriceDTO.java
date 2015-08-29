@@ -32,7 +32,7 @@ public class TicketPriceDTO implements Serializable
          this.section = new NestedSectionDTO(entity.getSection());
          this.ticketCategory = new NestedTicketCategoryDTO(
                entity.getTicketCategory());
-         this.price = entity.getPrice();
+         this.price = 0;//entity.getPrice();
          this.displayTitle = entity.toString();
       }
    }
@@ -56,7 +56,7 @@ public class TicketPriceDTO implements Serializable
          entity.setTicketCategory(this.ticketCategory.fromDTO(
                entity.getTicketCategory(), em));
       }
-      entity.setPrice(this.price);
+      entity.setPrice(0);//this.price);
       entity = em.merge(entity);
       return entity;
    }
@@ -103,7 +103,7 @@ public class TicketPriceDTO implements Serializable
 
    public float getPrice()
    {
-      return this.price;
+      return 0;// this.price;
    }
 
    public void setPrice(final float price)

@@ -151,9 +151,7 @@ public class Show implements Serializable {
     }
 
     public Set<TicketPrice> getTicketPrices() {
-    	for (TicketPrice t:ticketPrices ){
-    		t.setPrice(0);
-    	}
+
         return ticketPrices;
     }
 
