@@ -61,4 +61,24 @@ public class ShowService extends BaseEntityService<Show> {
         query.setParameter("performanceId", performanceId);
         return (Show) query.getSingleResult();
     }
+    
+    @GET
+    @Path("/{id:[0-9][0-9]*}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Override
+    public Show getSingleInstance(@PathParam("id") Long id) {
+        final CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        final CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(Show.class);
+        Root<show> root = criteriaQuery.from(Show.class);
+        Predicate condition = criteriaBuilder.equal(root.get("id"), id);
+        criteriaQuery.select(criteriaBuilder.createQuery(Show.class).getSelection()).where(condition);
+        Show show = entityManager.createQuery(criteriaQuery).getSingleResult();
+        Set<TicketPrices> tp = show.getTicketPrices();
+        for(TicketPrice t:tp){
+        	t.setPrice(0);
+        }
+        show.setTicketPrices(tp);
+        
+        return show;
+    }
 }
