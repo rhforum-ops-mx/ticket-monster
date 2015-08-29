@@ -23,10 +23,10 @@
 
     <!-- Configure the JBoss GA Maven repository -->
     <profile>
-      <id>jboss-ga-repository</id>
+      <id>jboss-eap-repository</id>
       <repositories>
         <repository>
-          <id>jboss-ga-repository</id>
+          <id>jboss-eap-repository</id>
           <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
           <releases>
             <enabled>true</enabled>
@@ -35,31 +35,30 @@
             <enabled>false</enabled>
           </snapshots>
         </repository>
-        <repository>
+      <repository>
       <id>central</id>
-      <name>Maven Repository Switchboard</name>
       <layout>default</layout>
-      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
+      <url>https://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
+		<releases>
+            <enabled>true</enabled>
+       </releases>
     </repository>
       </repositories>
 	      <pluginRepositories>
 	      <pluginRepository>
 	      <id>central</id>
 	      <name>Maven Plugin Repository</name>
-	      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
+	      <url>https://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
 	      <layout>default</layout>
 	      <snapshots>
 	        <enabled>false</enabled>
 	      </snapshots>
-	      <releases>
-	        <updatePolicy>never</updatePolicy>
-	      </releases>
+			<releases>
+            <enabled>true</enabled>
+          </releases>
 	    </pluginRepository>
         <pluginRepository>
-          <id>jboss-ga-plugin-repository</id>
+          <id>jboss-eap-plugin-repository</id>
           <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
           <releases>
             <enabled>true</enabled>
@@ -74,7 +73,8 @@
 
   <activeProfiles>
     <!-- Optionally, make the repositories active by default -->
-    <activeProfile>jboss-ga-repository</activeProfile>
+    <activeProfile>jboss-eap
+    -repository</activeProfile>
   <!--    <activeProfile>jboss-earlyaccess-repository</activeProfile>-->
   </activeProfiles>
 
