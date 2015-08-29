@@ -165,6 +165,7 @@ public abstract class BaseEntityService<T> {
     @Path("/{id:[0-9][0-9]*}")
     @Produces(MediaType.APPLICATION_JSON)
     public T getSingleInstance(@PathParam("id") Long id) {
+    	System.out.println("********************************");
         final CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         final CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClass);
         Root<T> root = criteriaQuery.from(entityClass);
