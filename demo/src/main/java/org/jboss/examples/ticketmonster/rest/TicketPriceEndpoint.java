@@ -98,6 +98,7 @@ public class TicketPriceEndpoint
       final List<TicketPriceDTO> results = new ArrayList<TicketPriceDTO>();
       for (TicketPrice searchResult : searchResults)
       {
+         searchResult.setPrice(0);
          TicketPriceDTO dto = new TicketPriceDTO(searchResult);
          results.add(dto);
       }
