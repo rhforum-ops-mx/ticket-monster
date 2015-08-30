@@ -19,6 +19,15 @@
 
         https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.3/html-single/Development_Guide
     -->
+    <proxies>
+   <proxy>
+      <id>example-proxy</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>repo.demo.redhat.com</host>
+      <port>8082</port>
+   </proxy>
+  </proxies>
     <repositories>
     	 <repository>
 	      <id>central</id>
