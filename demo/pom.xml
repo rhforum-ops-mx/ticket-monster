@@ -259,6 +259,20 @@
         </pluginManagement>
     </build>
   <repositories>
+  	<repository>
+     <id>jboss-eap-repository-group</id>
+      <name>JBoss EAP Maven Repository</name>
+      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/jboss-eap-repository/</url>
+      <layout>default</layout>
+      <releases>
+         <enabled>true</enabled>
+         <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+         <enabled>true</enabled>
+         <updatePolicy>never</updatePolicy>
+      </snapshots>
+   </repository>
     	 <repository>
 	      <id>central</id>
 	      <name>Central Repository</name>
@@ -294,6 +308,17 @@
     </repositories>
 
     <pluginRepositories>
+    	   <pluginRepository>
+      <id>jboss-eap-repository-group</id>
+      <name>JBoss EAP Maven Repository</name>
+      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/jboss-eap-repository/</url>
+      <releases>
+         <enabled>true</enabled>
+      </releases>
+      <snapshots>
+         <enabled>true</enabled>
+      </snapshots>
+   </pluginRepository>
     	<pluginRepository>
 	    <id>central</id>
 	      <name>Central Repository</name>
