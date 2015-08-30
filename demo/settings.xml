@@ -23,7 +23,7 @@
         <mirror> 
             <!--This sends everything else to /public -->
             <id>nexus</id>
-            <mirrorOf>*</mirrorOf>
+            <mirrorOf>central,redhat-techpreview-all-repository,jboss-eap-repository</mirrorOf>
             <url>http://repo.demo.redhat.com:8081/nexus/content/groups/public/</url>
 <!--                <url>http://repo.demo.redhat.com:8081/nexus/content/groups/public/</url>-->
 <!--            <url>http://153.92.38.36:8081/nexus/content/groups/public/</url>-->
