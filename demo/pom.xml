@@ -291,7 +291,7 @@
             <id>redhat-techpreview-all-repository</id>
           <!--  <url>https://maven.repository.redhat.com/techpreview/all/</url> -->
           <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
-            <<layout>default</layout>
+            <layout>default</layout>
       <releases>
          <enabled>true</enabled>
          <updatePolicy>never</updatePolicy>
