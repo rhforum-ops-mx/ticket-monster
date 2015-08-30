@@ -260,9 +260,9 @@
     </build>
   <repositories>
   	<repository>
-     <id>jboss-eap-repository-group</id>
+     <id>jboss-eap</id>
       <name>JBoss EAP Maven Repository</name>
-      <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
+      <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-eap-repository/</url>
       <layout>default</layout>
       <releases>
          <enabled>true</enabled>
@@ -288,7 +288,7 @@
       </snapshots>
 	    </repository>
         <repository>
-            <id>techpreview</id>
+            <id>jboss-ga-repository</id>
           <!--  <url>https://maven.repository.redhat.com/techpreview/all/</url> -->
           <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
             <layout>default</layout>
@@ -315,9 +315,9 @@
 
     <pluginRepositories>
     	   <pluginRepository>
-      <id>jboss-eap-repository-group</id>
+      <id>jboss-eap-maven-plugin-repository</id>
       <name>JBoss EAP Maven Repository</name>
-      <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
+      <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-eap-repository/</url>
       <releases>
          <enabled>true</enabled>
       </releases>
@@ -337,7 +337,7 @@
 	      </snapshots>
     </pluginRepository>
         <pluginRepository>
-            <id>techpreview</id>
+            <id>jboss-ga-repository</id>
             <!--<url>https://maven.repository.redhat.com/techpreview/all/</url>-->
             <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
             <releases>
