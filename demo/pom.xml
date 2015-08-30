@@ -262,7 +262,7 @@
   	<repository>
      <id>jboss-eap-repository-group</id>
       <name>JBoss EAP Maven Repository</name>
-      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
+      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
       <layout>default</layout>
       <releases>
          <enabled>true</enabled>
@@ -290,7 +290,7 @@
         <repository>
             <id>redhat-techpreview-all-repository</id>
           <!--  <url>https://maven.repository.redhat.com/techpreview/all/</url> -->
-          <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
+          <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
             <layout>default</layout>
       <releases>
          <enabled>true</enabled>
@@ -303,7 +303,7 @@
         </repository>
         <repository>
           <id>jboss-eap-repository</id>
-          <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
+          <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -317,7 +317,7 @@
     	   <pluginRepository>
       <id>jboss-eap-repository-group</id>
       <name>JBoss EAP Maven Repository</name>
-      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
+      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
       <releases>
          <enabled>true</enabled>
       </releases>
@@ -328,7 +328,7 @@
     	<pluginRepository>
 	    <id>central</id>
 	      <name>Central Repository</name>
-	      <url>https://10.17.48.30:8081/nexus/content/repositories/central/</url>
+	      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -339,7 +339,7 @@
         <pluginRepository>
             <id>redhat-techpreview-all-repository</id>
             <!--<url>https://maven.repository.redhat.com/techpreview/all/</url>-->
-            <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
+            <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/central/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
