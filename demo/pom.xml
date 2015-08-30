@@ -288,9 +288,9 @@
       </snapshots>
 	    </repository>
         <repository>
-            <id>redhat-techpreview-all-repository</id>
+            <id>techpreview</id>
           <!--  <url>https://maven.repository.redhat.com/techpreview/all/</url> -->
-          <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
+          <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
             <layout>default</layout>
       <releases>
          <enabled>true</enabled>
@@ -337,9 +337,9 @@
 	      </snapshots>
     </pluginRepository>
         <pluginRepository>
-            <id>redhat-techpreview-all-repository</id>
+            <id>techpreview</id>
             <!--<url>https://maven.repository.redhat.com/techpreview/all/</url>-->
-            <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
+            <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
