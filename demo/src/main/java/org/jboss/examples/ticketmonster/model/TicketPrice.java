@@ -123,7 +123,7 @@ public class TicketPrice implements Serializable {
     }
 
     public void setTicketCategory(TicketCategory ticketCategory) {
-        this.ticketCategory = ticketCategory;
+        this.ticketCategory = ticketCategory;//
     }
 
     public float getPrice() {
