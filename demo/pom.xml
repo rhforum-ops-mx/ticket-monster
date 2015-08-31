@@ -275,7 +275,7 @@
   	<repository>
      <id>jboss-eap</id>
       <name>JBoss EAP Maven Repository</name>
-      <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-eap-repository/</url>
+      <url>http://nexus.demo.redhat.com:8081/nexus/content/repositories/jboss-eap-repository/</url>
       <layout>default</layout>
       <releases>
          <enabled>true</enabled>
@@ -300,7 +300,7 @@
         </repository>
         <repository>
           <id>jboss-eap-repository</id>
-          <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
+          <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-eap-repository/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
