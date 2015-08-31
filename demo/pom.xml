@@ -7,7 +7,7 @@
     <packaging>war</packaging>
     <name>ticket-monster</name>
     <description>A starter HTML5 + REST webapp project for use on JBoss EAP.</description>
-
+ 
     <!-- Activate JBoss Product Maven repository.
 
         NOTE: Configuring the Maven repository in the pom.xml file is not a recommended procedure
