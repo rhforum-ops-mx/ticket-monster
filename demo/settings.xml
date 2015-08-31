@@ -22,13 +22,18 @@
     <mirrors>
         <mirror> 
             <!--This sends everything else to /public -->
-            <id>nexus</id>
-            <mirrorOf>central,redhat-techpreview-all-repository,jboss-eap-repository</mirrorOf>
-            <url>http://repo.demo.redhat.com:8081/nexus/content/groups/public/</url>
+            <id>nexusCentral</id>
+            <mirrorOf>central</mirrorOf>
+            <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
 <!--                <url>http://repo.demo.redhat.com:8081/nexus/content/groups/public/</url>-->
 <!--            <url>http://153.92.38.36:8081/nexus/content/groups/public/</url>-->
 <!--            <url>http://nexus.cloudapps.workshopdevops.com/content/groups/public/</url>-->
-</mirror>
+	</mirror>
+	 <mirror> 
+            <id>nexusRedhat</id>
+            <mirrorOf>redhat-techpreview-all-repository</mirrorOf>
+            <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
+	</mirror>
     </mirrors>
     <profiles>
     <profile>
