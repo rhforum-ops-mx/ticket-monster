@@ -314,7 +314,7 @@
     	   <pluginRepository>
       <id>jboss-eap-maven-plugin-repository</id>
       <name>JBoss EAP Maven Repository</name>
-      <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-eap-repository/</url>
+      <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
       <releases>
          <enabled>true</enabled>
       </releases>
