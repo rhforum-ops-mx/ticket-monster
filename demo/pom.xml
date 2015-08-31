@@ -260,20 +260,6 @@
     </build>
   <repositories>
   	<repository>
-     <id>jboss-eap</id>
-      <name>JBoss EAP Maven Repository</name>
-      <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-eap-repository/</url>
-      <layout>default</layout>
-      <releases>
-         <enabled>true</enabled>
-         <updatePolicy>never</updatePolicy>
-      </releases>
-      <snapshots>
-         <enabled>true</enabled>
-         <updatePolicy>never</updatePolicy>
-      </snapshots>
-   </repository>
-    	 <repository>
 	      <id>central</id>
 	      <name>Central Repository</name>
 	      <url>https://10.17.48.30:8081/nexus/content/repositories/central/</url>
@@ -287,6 +273,20 @@
          <updatePolicy>never</updatePolicy>
       </snapshots>
 	    </repository>
+  	<repository>
+     <id>jboss-eap</id>
+      <name>JBoss EAP Maven Repository</name>
+      <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-eap-repository/</url>
+      <layout>default</layout>
+      <releases>
+         <enabled>true</enabled>
+         <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+         <enabled>true</enabled>
+         <updatePolicy>never</updatePolicy>
+      </snapshots>
+   </repository>
         <repository>
             <id>jboss-ga-repository</id>
           <!--  <url>https://maven.repository.redhat.com/techpreview/all/</url> -->
