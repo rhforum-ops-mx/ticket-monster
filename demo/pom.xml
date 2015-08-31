@@ -269,8 +269,7 @@
          <updatePolicy>never</updatePolicy>
       </releases>
       <snapshots>
-         <enabled>true</enabled>
-         <updatePolicy>never</updatePolicy>
+         <enabled>false</enabled>
       </snapshots>
 	    </repository>
   	<repository>
@@ -283,8 +282,7 @@
          <updatePolicy>never</updatePolicy>
       </releases>
       <snapshots>
-         <enabled>true</enabled>
-         <updatePolicy>never</updatePolicy>
+         <enabled>false</enabled>
       </snapshots>
    </repository>
         <repository>
@@ -297,8 +295,7 @@
          <updatePolicy>never</updatePolicy>
       </releases>
       <snapshots>
-         <enabled>true</enabled>
-         <updatePolicy>never</updatePolicy>
+         <enabled>false</enabled>
       </snapshots>
         </repository>
         <repository>
