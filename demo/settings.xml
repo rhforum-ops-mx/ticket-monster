@@ -18,51 +18,66 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-  
-  <profiles>
-
-    <!-- Configure the JBoss GA Maven repository -->
+ 
+    <mirrors>
+        <mirror> 
+            <!--This sends everything else to /public -->
+            <id>nexusCentral</id>
+            <mirrorOf>central</mirrorOf>
+            <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
+<!--                <url>http://repo.demo.redhat.com:8081/nexus/content/groups/public/</url>-->
+<!--            <url>http://153.92.38.36:8081/nexus/content/groups/public/</url>-->
+<!--            <url>http://nexus.cloudapps.workshopdevops.com/content/groups/public/</url>-->
+	</mirror>
+	 <mirror> 
+            <id>nexusRedhat</id>
+            <mirrorOf>redhat-techpreview-all-repository</mirrorOf>
+            <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
+	</mirror>
+    </mirrors>
+    <profiles>
     <profile>
-      <id>jboss-ga-repository</id>
-      <repositories>
-        <repository>
-          <id>jboss-ga-repository</id>
-          <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-eap-repository/</url>
-          <!--<url>http://maven.repository.redhat.com/techpreview/all</url>-->
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-        <repository>
-        	 <releases>
-            <enabled>true</enabled>
-          </releases>
-	      <snapshots>
-	        <enabled>false</enabled>
-	      </snapshots>
+		  <!-- When built in OpenShift the 'openshift' profile will be used when invoking mvn. -->
+		  <!-- Use this profile for any OpenShift specific customization your app will need. -->
+		  <!-- By default that is to put the resulting archive into the 'deployments' folder. -->
+		  <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
+		  <id>openshift</id>
+		    <build>
+		      <plugins>
+		        <plugin>
+		          <artifactId>maven-war-plugin</artifactId>
+		          <configuration>
+		            <outputDirectory>deployments</outputDirectory>
+		            <warName>ROOT</warName>
+		          </configuration>
+		        </plugin>
+		      </plugins>
+		    </build>
+		     <repositories>
+    	 <repository>
 	      <id>central</id>
 	      <name>Central Repository</name>
 	      <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
+	      <snapshots>
+	        <enabled>false</enabled>
+	      </snapshots>
+	      <releases>
+                <enabled>true</enabled>
+            </releases>
 	    </repository>
-      </repositories>
-      <pluginRepositories>
-          <pluginRepository>
-              <releases>
-                <updatePolicy>never</updatePolicy>
-              </releases>
-              <snapshots>
+        <repository>
+            <id>redhat-techpreview-all-repository</id>
+          <!--  <url>https://maven.repository.redhat.com/techpreview/all/</url> -->
+          <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
                 <enabled>false</enabled>
-              </snapshots>
-              <id>central</id>
-              <name>Central Repository</name>
-              <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
-    </pluginRepository>
-        <pluginRepository>
-          <id>jboss-ga-plugin-repository</id>
-          <!--<url>http://maven.repository.redhat.com/techpreview/all</url>-->
+            </snapshots>
+        </repository>
+        <repository>
+          <id>jboss-eap-repository</id>
           <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-eap-repository/</url>
           <releases>
             <enabled>true</enabled>
@@ -70,46 +85,35 @@
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
-        </pluginRepository>
-      </pluginRepositories>
-    </profile>
-    <!-- Configure the JBoss Early Access Maven repository -->
-    <profile>
-      <id>jboss-earlyaccess-repository</id>
-      <repositories>
-        <repository>
-          <id>jboss-earlyaccess-repository</id>
-          <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-earlyaccess-repository</url>
-          <!--<url>http://maven.repository.redhat.com/earlyaccess/all/</url>-->
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
         </repository>
-      </repositories>
-      <pluginRepositories>
+    </repositories>
+
+    <pluginRepositories>
+    	<pluginRepository>
+	    <id>central</id>
+	      <name>Central Repository</name>
+	      <url>http://10.17.48.30:8081/nexus/content/repositories/central/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+	      <snapshots>
+	        <enabled>false</enabled>
+	      </snapshots>
+    </pluginRepository>
         <pluginRepository>
-          <id>jboss-earlyaccess-plugin-repository</id>
-          <url>http://10.17.48.30:8081/nexus/content/repositories/jboss-earlyaccess-repository/</url>
-          <!--<url>http://maven.repository.redhat.com/earlyaccess/all/</url>-->
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
+            <id>redhat-techpreview-all-repository</id>
+            <!--<url>https://maven.repository.redhat.com/techpreview/all/</url>-->
+            <url>http://10.17.48.30:8081/nexus/content/repositories/redhat-techpreview-all-repository/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
         </pluginRepository>
-      </pluginRepositories>
-    </profile>
-    
-  </profiles>
-
-  <activeProfiles>
-    <!-- Optionally, make the repositories active by default -->
-    <activeProfile>jboss-ga-repository</activeProfile>
-    <!--<activeProfile>jboss-earlyaccess-repository</activeProfile>-->
-  </activeProfiles>
-
+               
+    </pluginRepositories>
+		</profile>
+		</profiles>
 </settings>
+
