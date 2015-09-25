@@ -131,8 +131,7 @@ public class TicketPrice implements Serializable {
     }
 
     public void setPrice(float price) {
-        this.price = price;
-        // Hernan
+        this.price = price;        
     }
 
     /* equals() and hashCode() for TicketPrice, using the natural identity of the object */
